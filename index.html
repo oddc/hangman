@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
+    <!-- https://www.srihash.org/ -->
+    <script src="hangman.js"></script>
+</head>
+
+<body data-gamestate="START">
+
+<div id="newgame" class="hide-on-win hide-on-playing hide-on-lose">
+    <h1>Hangman</h1>
+    <form>
+        <label for="playerName">Name:</label><br/>
+        <input type="text" name="playerName" id="playerName" class="mb"/><br/>
+        <label for="difficulty">Schwierigkeitsgrad:</label><br/>
+        <select id="difficulty" class="mb">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br/>
+        <button type="submit">Neues Spiel</button>
+    </form>
+</div>
+
+<div id="status" class="mb hide-on-start">
+    <div class="image"></div>
+</div>
+
+<div id="word" class="mb hide-on-start"></div>
+
+<div id="keyboard" class="hide-on-start hide-on-win hide-on-lose">
+    <div class="row">
+        <div class="key" data-value="Q">Q</div>
+        <div class="key" data-value="W">W</div>
+        <div class="key" data-value="E">E</div>
+        <div class="key" data-value="R">R</div>
+        <div class="key" data-value="T">T</div>
+        <div class="key" data-value="Z">Z</div>
+        <div class="key" data-value="U">U</div>
+        <div class="key" data-value="I">I</div>
+        <div class="key" data-value="O">O</div>
+        <div class="key" data-value="P">P</div>
+        <div class="key" data-value="Ü">Ü</div>
+    </div>
+    <div class="row">
+        <div class="key" data-value="A">A</div>
+        <div class="key" data-value="S">S</div>
+        <div class="key" data-value="D">D</div>
+        <div class="key" data-value="F">F</div>
+        <div class="key" data-value="G">G</div>
+        <div class="key" data-value="H">H</div>
+        <div class="key" data-value="J">J</div>
+        <div class="key" data-value="K">K</div>
+        <div class="key" data-value="L">L</div>
+        <div class="key" data-value="Ö">Ö</div>
+        <div class="key" data-value="Ä">Ä</div>
+    </div>
+    <div class="row">
+        <div class="key" data-value="Y">Y</div>
+        <div class="key" data-value="X">X</div>
+        <div class="key" data-value="C">C</div>
+        <div class="key" data-value="V">V</div>
+        <div class="key" data-value="B">B</div>
+        <div class="key" data-value="N">N</div>
+        <div class="key" data-value="M">M</div>
+    </div>
+</div>
+
+<div id="endgame" class="hide-on-start hide-on-playing">
+    <a href="/">Neues Spiel</a>
+</div>
+
+</body>
+</html>
